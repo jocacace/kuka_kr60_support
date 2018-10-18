@@ -1,0 +1,391 @@
+<robot
+  name="kuka_kr60">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.0436791859512302 0.000756993325450678 0.241811297515981"
+        rpy="0 0 0" />
+      <mass
+        value="130.845171867425" />
+      <inertia
+        ixx="4.89045495185679"
+        ixy="0.0374968390702705"
+        ixz="-0.207109575659601"
+        iyy="6.12908966258487"
+        iyz="-0.000666905469193029"
+        izz="6.03939140662442" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kuka_kr60_support/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kuka_kr60_support/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="link_1">
+    <inertial>
+      <origin
+        xyz="0.140775001892144 0.211684256508182 -0.014282449384274"
+        rpy="0 0 0" />
+      <mass
+        value="82.8570541472432" />
+      <inertia
+        ixx="2.43089586524892"
+        ixy="-1.17883223230142"
+        ixz="0.160248987462881"
+        iyy="4.14307189611632"
+        iyz="0.0798618700392625"
+        izz="4.34194902129537" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kuka_kr60_support/meshes/link_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kuka_kr60_support/meshes/link_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_a1"
+    type="revolute">
+    <origin
+      xyz="0 0 0.47975"
+      rpy="1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="link_1" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-3.22"
+      upper="3.22"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="link_2">
+    <inertial>
+      <origin
+        xyz="0.382307904215314 -0.16306654546705 0.000499911356832916"
+        rpy="0 0 0" />
+      <mass
+        value="54.532260158825" />
+      <inertia
+        ixx="0.505422628220594"
+        ixy="0.0781560181564976"
+        ixz="-0.00282731200502301"
+        iyy="5.39248085557244"
+        iyz="0.00104108561691797"
+        izz="5.26204221188545" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kuka_kr60_support/meshes/link_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.796078431372549 0.823529411764706 0.937254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kuka_kr60_support/meshes/link_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_a2"
+    type="revolute">
+    <origin
+      xyz="0.35 0.33557 0.094"
+      rpy="-1.5708 0 0" />
+    <parent
+      link="link_1" />
+    <child
+      link="link_2" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-2.35"
+      upper="0.61"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="link_3">
+    <inertial>
+      <origin
+        xyz="0.0224104444574682 0.107197329797912 0.0695655063110385"
+        rpy="0 0 0" />
+      <mass
+        value="58.6737055134858" />
+      <inertia
+        ixx="0.966338867264037"
+        ixy="0.193552855773063"
+        ixz="-0.190529183829101"
+        iyy="3.60605484568746"
+        iyz="-0.0554640744357253"
+        izz="3.5058865345578" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kuka_kr60_support/meshes/link_3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kuka_kr60_support/meshes/link_3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_a3"
+    type="revolute">
+    <origin
+      xyz="0.83287 -0.0097315 0"
+      rpy="0 0 -0.011684" />
+    <parent
+      link="link_2" />
+    <child
+      link="link_3" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-2.09"
+      upper="2.75"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="link_4">
+    <inertial>
+      <origin
+        xyz="0.195695132615539 -0.0107352464057435 0.000109040539318039"
+        rpy="0 0 0" />
+      <mass
+        value="9.51145025649873" />
+      <inertia
+        ixx="0.0556303879978218"
+        ixy="0.00498719624669921"
+        ixz="-7.51894990108083E-06"
+        iyy="0.163788967920299"
+        iyz="-2.92151774269028E-05"
+        izz="0.187609718005286" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kuka_kr60_support/meshes/link_4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kuka_kr60_support/meshes/link_4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_a4"
+    type="revolute">
+    <origin
+      xyz="0.60824 0.089904 0.145"
+      rpy="0 0 0" />
+    <parent
+      link="link_3" />
+    <child
+      link="link_4" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-6.1"
+      upper="6.1"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="link_5">
+    <inertial>
+      <origin
+        xyz="0.0258909572353643 0.0172714930553038 2.77581030716512E-06"
+        rpy="0 0 0" />
+      <mass
+        value="3.64515197022676" />
+      <inertia
+        ixx="0.0116204365192167"
+        ixy="0.00180821560463634"
+        ixz="-1.05869665681635E-06"
+        iyy="0.0154843992674793"
+        iyz="1.94797734906062E-07"
+        izz="0.0163048826181415" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kuka_kr60_support/meshes/link_5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kuka_kr60_support/meshes/link_5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_a5"
+    type="revolute">
+    <origin
+      xyz="0.41176 0 6.3846E-05"
+      rpy="0 -0.00079387 0.011684" />
+    <parent
+      link="link_4" />
+    <child
+      link="link_5" />
+    <axis
+      xyz="0.011683 0.99993 0" />
+    <limit
+      lower="-2.07"
+      upper="2.07"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="link_6">
+    <inertial>
+      <origin
+        xyz="0.0169571197340979 5.10153992383522E-08 -7.36285182980634E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.427110216297892" />
+      <inertia
+        ixx="0.000895841706521629"
+        ixy="-2.77057628319635E-10"
+        ixz="4.77474427297274E-07"
+        iyy="0.000498969629837929"
+        iyz="1.38274723687434E-09"
+        izz="0.000500544997054014" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kuka_kr60_support/meshes/link_6.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kuka_kr60_support/meshes/link_6.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_a6"
+    type="revolute">
+    <origin
+      xyz="0.12607 -3.6549E-05 -2.8142E-05"
+      rpy="-0.67012 0.00079387 0" />
+    <parent
+      link="link_5" />
+    <child
+      link="link_6" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-6.1"
+      upper="6.1"
+      effort="0"
+      velocity="0" />
+  </joint>
+</robot>
